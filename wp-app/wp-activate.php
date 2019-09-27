@@ -34,6 +34,7 @@ if ( isset( $_GET['key'] ) && isset( $_POST['key'] ) && $_GET['key'] !== $_POST[
 	$key = $_POST['key'];
 }
 
+
 if ( $key ) {
 	$redirect_url = remove_query_arg( 'key' );
 
