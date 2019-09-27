@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /home/andreamarrano/Documents/Projects/wordpress-docker-compose/wp-app/wp-content/plugins/Buma/includes/Buma</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="_css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="_css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href="_css/style.css" rel="stylesheet" type="text/css">
+  <link href="_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="index.html">/home/andreamarrano/Documents/Projects/wordpress-docker-compose/wp-app/wp-content/plugins/Buma/includes/Buma</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Autoloader.php.html#14">Buma\Autoloader</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Cpt/CustomPostType.php.html#7">Buma\Cpt\CustomPostType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Route/Builder.php.html#13">Buma\Route\Builder</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Route.php.html#9">Buma\Route</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QueryVars.php.html#11">Buma\QueryVars</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="OptionsPage/Tab/General.php.html#7">Buma\OptionsPage\Tab\General</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="OptionsPage/Tab.php.html#7">Buma\OptionsPage\Tab</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="OptionsPage.php.html#9">Buma\OptionsPage</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="MetaBox.php.html#14">Buma\MetaBox</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Locale.php.html#7">Buma\Locale</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FilterInput.php.html#11">Buma\FilterInput</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Cpt/Rooms.php.html#9">Buma\Cpt\Rooms</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Cpt/Plates.php.html#9">Buma\Cpt\Plates</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Cpt/Menus.php.html#11">Buma\Cpt\Menus</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Route/RoomSearch.php.html#8">Buma\Route\RoomSearch</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Rewrites.php.html#12">Buma\Rewrites</a></td><td class="text-right">12%</td></tr>
+       <tr><td><a href="Registry.php.html#12">Buma\Registry</a></td><td class="text-right">75%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="MetaBox.php.html#14">Buma\MetaBox</a></td><td class="text-right">3306</td></tr>
+       <tr><td><a href="Route.php.html#9">Buma\Route</a></td><td class="text-right">1190</td></tr>
+       <tr><td><a href="OptionsPage.php.html#9">Buma\OptionsPage</a></td><td class="text-right">506</td></tr>
+       <tr><td><a href="FilterInput.php.html#11">Buma\FilterInput</a></td><td class="text-right">462</td></tr>
+       <tr><td><a href="Autoloader.php.html#14">Buma\Autoloader</a></td><td class="text-right">240</td></tr>
+       <tr><td><a href="QueryVars.php.html#11">Buma\QueryVars</a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="Locale.php.html#7">Buma\Locale</a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="Rewrites.php.html#12">Buma\Rewrites</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Cpt/CustomPostType.php.html#7">Buma\Cpt\CustomPostType</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Registry.php.html#12">Buma\Registry</a></td><td class="text-right">5</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Autoloader.php.html#38"><abbr title="Buma\Autoloader::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QueryVars.php.html#61"><abbr title="Buma\QueryVars::clean">clean</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Route.php.html#106"><abbr title="Buma\Route::set_request">set_request</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Rewrites.php.html#91"><abbr title="Buma\Rewrites::request">request</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Rewrites.php.html#78"><abbr title="Buma\Rewrites::query_vars">query_vars</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Rewrites.php.html#63"><abbr title="Buma\Rewrites::add">add</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Registry.php.html#68"><abbr title="Buma\Registry::has">has</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QueryVars.php.html#73"><abbr title="Buma\QueryVars::add">add</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QueryVars.php.html#43"><abbr title="Buma\QueryVars::filter_groups">filter_groups</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Route.php.html#169"><abbr title="Buma\Route::query_vars">query_vars</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QueryVars.php.html#29"><abbr title="Buma\QueryVars::filter_vars">filter_vars</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QueryVars.php.html#18"><abbr title="Buma\QueryVars::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="OptionsPage/Tab/General.php.html#39"><abbr title="Buma\OptionsPage\Tab\General::slide_home">slide_home</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="OptionsPage/Tab/General.php.html#16"><abbr title="Buma\OptionsPage\Tab\General::get_name">get_name</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="OptionsPage/Tab.php.html#72"><abbr title="Buma\OptionsPage\Tab::get_id">get_id</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="OptionsPage/Tab.php.html#63"><abbr title="Buma\OptionsPage\Tab::get_page">get_page</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Route.php.html#160"><abbr title="Buma\Route::add_analytics">add_analytics</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Route.php.html#178"><abbr title="Buma\Route::wp_canonical">wp_canonical</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="OptionsPage/Tab.php.html#22"><abbr title="Buma\OptionsPage\Tab::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Route.php.html#425"><abbr title="Buma\Route::get_slug">get_slug</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Route/RoomSearch.php.html#41"><abbr title="Buma\Route\RoomSearch::wp_description">wp_description</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Route/RoomSearch.php.html#32"><abbr title="Buma\Route\RoomSearch::wp_title">wp_title</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Route/RoomSearch.php.html#23"><abbr title="Buma\Route\RoomSearch::wp_structured_data">wp_structured_data</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Route/RoomSearch.php.html#16"><abbr title="Buma\Route\RoomSearch::add_rewrite_rule">add_rewrite_rule</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Route/RoomSearch.php.html#11"><abbr title="Buma\Route\RoomSearch::get_data">get_data</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Route/Builder.php.html#20"><abbr title="Buma\Route\Builder::init">init</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Route.php.html#411"><abbr title="Buma\Route::post_link">post_link</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Route.php.html#198"><abbr title="Buma\Route::wp_seo_content">wp_seo_content</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Route.php.html#299"><abbr title="Buma\Route::set_404">set_404</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Route.php.html#288"><abbr title="Buma\Route::get_query_var">get_query_var</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Route.php.html#269"><abbr title="Buma\Route::flatten">flatten</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Route.php.html#246"><abbr title="Buma\Route::build_uri">build_uri</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Route.php.html#235"><abbr title="Buma\Route::get_locale">get_locale</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Route.php.html#224"><abbr title="Buma\Route::sanitize_classname">sanitize_classname</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Route.php.html#209"><abbr title="Buma\Route::template_include">template_include</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="OptionsPage/Tab.php.html#54"><abbr title="Buma\OptionsPage\Tab::set_page">set_page</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="OptionsPage.php.html#213"><abbr title="Buma\OptionsPage::tab_exists">tab_exists</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Autoloader.php.html#52"><abbr title="Buma\Autoloader::setNamespace">setNamespace</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Cpt/CustomPostType.php.html#43"><abbr title="Buma\Cpt\CustomPostType::query_vars">query_vars</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FilterInput.php.html#39"><abbr title="Buma\FilterInput::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Cpt/Rooms.php.html#90"><abbr title="Buma\Cpt\Rooms::setup_metabox">setup_metabox</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Cpt/Rooms.php.html#19"><abbr title="Buma\Cpt\Rooms::register_post_type">register_post_type</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Cpt/Plates.php.html#90"><abbr title="Buma\Cpt\Plates::setup_metabox">setup_metabox</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Cpt/Plates.php.html#19"><abbr title="Buma\Cpt\Plates::register_post_type">register_post_type</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Cpt/Menus.php.html#164"><abbr title="Buma\Cpt\Menus::my_action_javascript">my_action_javascript</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Cpt/CustomPostType.php.html#29"><abbr title="Buma\Cpt\CustomPostType::register_hooks">register_hooks</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FilterInput.php.html#61"><abbr title="Buma\FilterInput::set_flags">set_flags</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Cpt/CustomPostType.php.html#12"><abbr title="Buma\Cpt\CustomPostType::init">init</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Autoloader.php.html#107"><abbr title="Buma\Autoloader::getFileExtension">getFileExtension</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Autoloader.php.html#98"><abbr title="Buma\Autoloader::setFileExtension">setFileExtension</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Autoloader.php.html#89"><abbr title="Buma\Autoloader::getIncludePath">getIncludePath</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Autoloader.php.html#80"><abbr title="Buma\Autoloader::setIncludePath">setIncludePath</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Autoloader.php.html#71"><abbr title="Buma\Autoloader::getNamespaceSeparator">getNamespaceSeparator</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Autoloader.php.html#62"><abbr title="Buma\Autoloader::setNamespaceSeparator">setNamespaceSeparator</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FilterInput.php.html#50"><abbr title="Buma\FilterInput::set_filter">set_filter</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FilterInput.php.html#70"><abbr title="Buma\FilterInput::has_var">has_var</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="OptionsPage.php.html#191"><abbr title="Buma\OptionsPage::get_tabs">get_tabs</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="MetaBox.php.html#75"><abbr title="Buma\MetaBox::show_box">show_box</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="OptionsPage.php.html#171"><abbr title="Buma\OptionsPage::get_selected_tab">get_selected_tab</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="OptionsPage.php.html#137"><abbr title="Buma\OptionsPage::render">render</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="OptionsPage.php.html#117"><abbr title="Buma\OptionsPage::load_tabs">load_tabs</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="OptionsPage.php.html#31"><abbr title="Buma\OptionsPage::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="MetaBox.php.html#226"><abbr title="Buma\MetaBox::get_fields">get_fields</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="MetaBox.php.html#169"><abbr title="Buma\MetaBox::save_data">save_data</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="MetaBox.php.html#58"><abbr title="Buma\MetaBox::add_config">add_config</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FilterInput.php.html#84"><abbr title="Buma\FilterInput::get_options">get_options</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="MetaBox.php.html#49"><abbr title="Buma\MetaBox::has_config">has_config</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Locale.php.html#58"><abbr title="Buma\Locale::get_country">get_country</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Locale.php.html#49"><abbr title="Buma\Locale::get_language">get_language</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Locale.php.html#17"><abbr title="Buma\Locale::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FilterInput.php.html#166"><abbr title="Buma\FilterInput::get_request_uri">get_request_uri</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FilterInput.php.html#121"><abbr title="Buma\FilterInput::get_arr">get_arr</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FilterInput.php.html#102"><abbr title="Buma\FilterInput::get">get</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Route/RoomSearch.php.html#52"><abbr title="Buma\Route\RoomSearch::the_content">the_content</abbr></a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="MetaBox.php.html#75"><abbr title="Buma\MetaBox::show_box">show_box</abbr></a></td><td class="text-right">930</td></tr>
+       <tr><td><a href="MetaBox.php.html#169"><abbr title="Buma\MetaBox::save_data">save_data</abbr></a></td><td class="text-right">380</td></tr>
+       <tr><td><a href="FilterInput.php.html#121"><abbr title="Buma\FilterInput::get_arr">get_arr</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="Route.php.html#411"><abbr title="Buma\Route::post_link">post_link</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="OptionsPage.php.html#213"><abbr title="Buma\OptionsPage::tab_exists">tab_exists</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="OptionsPage.php.html#117"><abbr title="Buma\OptionsPage::load_tabs">load_tabs</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="FilterInput.php.html#84"><abbr title="Buma\FilterInput::get_options">get_options</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="MetaBox.php.html#58"><abbr title="Buma\MetaBox::add_config">add_config</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="FilterInput.php.html#102"><abbr title="Buma\FilterInput::get">get</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="OptionsPage.php.html#137"><abbr title="Buma\OptionsPage::render">render</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="OptionsPage.php.html#171"><abbr title="Buma\OptionsPage::get_selected_tab">get_selected_tab</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="QueryVars.php.html#43"><abbr title="Buma\QueryVars::filter_groups">filter_groups</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="QueryVars.php.html#73"><abbr title="Buma\QueryVars::add">add</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Route.php.html#269"><abbr title="Buma\Route::flatten">flatten</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Cpt/CustomPostType.php.html#12"><abbr title="Buma\Cpt\CustomPostType::init">init</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Locale.php.html#58"><abbr title="Buma\Locale::get_country">get_country</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Locale.php.html#49"><abbr title="Buma\Locale::get_language">get_language</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="MetaBox.php.html#226"><abbr title="Buma\MetaBox::get_fields">get_fields</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="FilterInput.php.html#70"><abbr title="Buma\FilterInput::has_var">has_var</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="OptionsPage.php.html#191"><abbr title="Buma\OptionsPage::get_tabs">get_tabs</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Rewrites.php.html#91"><abbr title="Buma\Rewrites::request">request</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Route.php.html#299"><abbr title="Buma\Route::set_404">set_404</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 7.0.7</a> using <a href="https://secure.php.net/" target="_top">PHP 7.2.19-0ubuntu0.18.04.2</a> with <a href="https://xdebug.org/">Xdebug 2.6.0</a> and <a href="https://phpunit.de/">PHPUnit 8.3.4</a> at Mon Aug 26 10:22:58 UTC 2019.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="_js/jquery.min.js" type="text/javascript"></script>
+  <script src="_js/d3.min.js" type="text/javascript"></script>
+  <script src="_js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([15,0,1,0,0,0,0,0,1,0,0,2], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([74,0,0,0,0,0,0,0,0,0,0,45], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,15,"<a href=\"Autoloader.php.html#14\">Buma\\Autoloader<\/a>"],[100,1,"<a href=\"Cpt\/Builder.php.html#12\">Buma\\Cpt\\Builder<\/a>"],[0,5,"<a href=\"Cpt\/CustomPostType.php.html#7\">Buma\\Cpt\\CustomPostType<\/a>"],[0,3,"<a href=\"Cpt\/Menus.php.html#11\">Buma\\Cpt\\Menus<\/a>"],[0,2,"<a href=\"Cpt\/Plates.php.html#9\">Buma\\Cpt\\Plates<\/a>"],[0,2,"<a href=\"Cpt\/Rooms.php.html#9\">Buma\\Cpt\\Rooms<\/a>"],[0,21,"<a href=\"FilterInput.php.html#11\">Buma\\FilterInput<\/a>"],[0,7,"<a href=\"Locale.php.html#7\">Buma\\Locale<\/a>"],[0,57,"<a href=\"MetaBox.php.html#14\">Buma\\MetaBox<\/a>"],[0,22,"<a href=\"OptionsPage.php.html#9\">Buma\\OptionsPage<\/a>"],[0,10,"<a href=\"OptionsPage\/Tab.php.html#7\">Buma\\OptionsPage\\Tab<\/a>"],[0,3,"<a href=\"OptionsPage\/Tab\/General.php.html#7\">Buma\\OptionsPage\\Tab\\General<\/a>"],[100,11,"<a href=\"PluginOptions.php.html#7\">Buma\\PluginOptions<\/a>"],[0,9,"<a href=\"QueryVars.php.html#11\">Buma\\QueryVars<\/a>"],[75,5,"<a href=\"Registry.php.html#12\">Buma\\Registry<\/a>"],[12.5,6,"<a href=\"Rewrites.php.html#12\">Buma\\Rewrites<\/a>"],[0,34,"<a href=\"Route.php.html#9\">Buma\\Route<\/a>"],[0,1,"<a href=\"Route\/Builder.php.html#13\">Buma\\Route\\Builder<\/a>"],[0,6,"<a href=\"Route\/RoomSearch.php.html#8\">Buma\\Route\\RoomSearch<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"Autoloader.php.html#38\">Buma\\Autoloader::create<\/a>"],[0,1,"<a href=\"Autoloader.php.html#52\">Buma\\Autoloader::setNamespace<\/a>"],[0,1,"<a href=\"Autoloader.php.html#62\">Buma\\Autoloader::setNamespaceSeparator<\/a>"],[0,1,"<a href=\"Autoloader.php.html#71\">Buma\\Autoloader::getNamespaceSeparator<\/a>"],[0,1,"<a href=\"Autoloader.php.html#80\">Buma\\Autoloader::setIncludePath<\/a>"],[0,1,"<a href=\"Autoloader.php.html#89\">Buma\\Autoloader::getIncludePath<\/a>"],[0,1,"<a href=\"Autoloader.php.html#98\">Buma\\Autoloader::setFileExtension<\/a>"],[0,1,"<a href=\"Autoloader.php.html#107\">Buma\\Autoloader::getFileExtension<\/a>"],[100,1,"<a href=\"Autoloader.php.html#115\">Buma\\Autoloader::register<\/a>"],[100,1,"<a href=\"Autoloader.php.html#123\">Buma\\Autoloader::unregister<\/a>"],[100,5,"<a href=\"Autoloader.php.html#134\">Buma\\Autoloader::loadClass<\/a>"],[100,1,"<a href=\"Cpt\/Builder.php.html#17\">Buma\\Cpt\\Builder::init<\/a>"],[0,3,"<a href=\"Cpt\/CustomPostType.php.html#12\">Buma\\Cpt\\CustomPostType::init<\/a>"],[0,1,"<a href=\"Cpt\/CustomPostType.php.html#29\">Buma\\Cpt\\CustomPostType::register_hooks<\/a>"],[0,1,"<a href=\"Cpt\/CustomPostType.php.html#43\">Buma\\Cpt\\CustomPostType::query_vars<\/a>"],[100,1,"<a href=\"Cpt\/Menus.php.html#23\">Buma\\Cpt\\Menus::setup_metabox<\/a>"],[100,1,"<a href=\"Cpt\/Menus.php.html#116\">Buma\\Cpt\\Menus::register_post_type<\/a>"],[0,1,"<a href=\"Cpt\/Menus.php.html#164\">Buma\\Cpt\\Menus::my_action_javascript<\/a>"],[0,1,"<a href=\"Cpt\/Plates.php.html#19\">Buma\\Cpt\\Plates::register_post_type<\/a>"],[0,1,"<a href=\"Cpt\/Plates.php.html#90\">Buma\\Cpt\\Plates::setup_metabox<\/a>"],[0,1,"<a href=\"Cpt\/Rooms.php.html#19\">Buma\\Cpt\\Rooms::register_post_type<\/a>"],[0,1,"<a href=\"Cpt\/Rooms.php.html#90\">Buma\\Cpt\\Rooms::setup_metabox<\/a>"],[0,1,"<a href=\"FilterInput.php.html#39\">Buma\\FilterInput::__construct<\/a>"],[0,1,"<a href=\"FilterInput.php.html#50\">Buma\\FilterInput::set_filter<\/a>"],[0,1,"<a href=\"FilterInput.php.html#61\">Buma\\FilterInput::set_flags<\/a>"],[0,2,"<a href=\"FilterInput.php.html#70\">Buma\\FilterInput::has_var<\/a>"],[0,4,"<a href=\"FilterInput.php.html#84\">Buma\\FilterInput::get_options<\/a>"],[0,3,"<a href=\"FilterInput.php.html#102\">Buma\\FilterInput::get<\/a>"],[0,7,"<a href=\"FilterInput.php.html#121\">Buma\\FilterInput::get_arr<\/a>"],[100,1,"<a href=\"FilterInput.php.html#159\">Buma\\FilterInput::equals<\/a>"],[0,1,"<a href=\"FilterInput.php.html#166\">Buma\\FilterInput::get_request_uri<\/a>"],[0,1,"<a href=\"Locale.php.html#17\">Buma\\Locale::__construct<\/a>"],[100,2,"<a href=\"Locale.php.html#28\">Buma\\Locale::create<\/a>"],[0,2,"<a href=\"Locale.php.html#49\">Buma\\Locale::get_language<\/a>"],[0,2,"<a href=\"Locale.php.html#58\">Buma\\Locale::get_country<\/a>"],[100,2,"<a href=\"MetaBox.php.html#30\">Buma\\MetaBox::create<\/a>"],[0,1,"<a href=\"MetaBox.php.html#49\">Buma\\MetaBox::has_config<\/a>"],[0,3,"<a href=\"MetaBox.php.html#58\">Buma\\MetaBox::add_config<\/a>"],[0,30,"<a href=\"MetaBox.php.html#75\">Buma\\MetaBox::show_box<\/a>"],[0,19,"<a href=\"MetaBox.php.html#169\">Buma\\MetaBox::save_data<\/a>"],[0,2,"<a href=\"MetaBox.php.html#226\">Buma\\MetaBox::get_fields<\/a>"],[0,1,"<a href=\"OptionsPage.php.html#31\">Buma\\OptionsPage::__construct<\/a>"],[100,1,"<a href=\"OptionsPage.php.html#47\">Buma\\OptionsPage::__get<\/a>"],[100,1,"<a href=\"OptionsPage.php.html#60\">Buma\\OptionsPage::init<\/a>"],[100,1,"<a href=\"OptionsPage.php.html#81\">Buma\\OptionsPage::register<\/a>"],[100,1,"<a href=\"OptionsPage.php.html#103\">Buma\\OptionsPage::validate<\/a>"],[0,4,"<a href=\"OptionsPage.php.html#117\">Buma\\OptionsPage::load_tabs<\/a>"],[0,3,"<a href=\"OptionsPage.php.html#137\">Buma\\OptionsPage::render<\/a>"],[0,3,"<a href=\"OptionsPage.php.html#171\">Buma\\OptionsPage::get_selected_tab<\/a>"],[0,2,"<a href=\"OptionsPage.php.html#191\">Buma\\OptionsPage::get_tabs<\/a>"],[100,1,"<a href=\"OptionsPage.php.html#202\">Buma\\OptionsPage::get_active_tab<\/a>"],[0,4,"<a href=\"OptionsPage.php.html#213\">Buma\\OptionsPage::tab_exists<\/a>"],[0,1,"<a href=\"OptionsPage\/Tab.php.html#22\">Buma\\OptionsPage\\Tab::__construct<\/a>"],[100,1,"<a href=\"OptionsPage\/Tab.php.html#36\">Buma\\OptionsPage\\Tab::init<\/a>"],[100,1,"<a href=\"OptionsPage\/Tab.php.html#47\">Buma\\OptionsPage\\Tab::get_name<\/a>"],[0,1,"<a href=\"OptionsPage\/Tab.php.html#54\">Buma\\OptionsPage\\Tab::set_page<\/a>"],[0,1,"<a href=\"OptionsPage\/Tab.php.html#63\">Buma\\OptionsPage\\Tab::get_page<\/a>"],[0,1,"<a href=\"OptionsPage\/Tab.php.html#72\">Buma\\OptionsPage\\Tab::get_id<\/a>"],[100,1,"<a href=\"OptionsPage\/Tab.php.html#81\">Buma\\OptionsPage\\Tab::init_section<\/a>"],[100,1,"<a href=\"OptionsPage\/Tab.php.html#100\">Buma\\OptionsPage\\Tab::render_input<\/a>"],[100,1,"<a href=\"OptionsPage\/Tab.php.html#121\">Buma\\OptionsPage\\Tab::render_checkbox<\/a>"],[100,1,"<a href=\"OptionsPage\/Tab.php.html#139\">Buma\\OptionsPage\\Tab::section<\/a>"],[0,1,"<a href=\"OptionsPage\/Tab\/General.php.html#16\">Buma\\OptionsPage\\Tab\\General::get_name<\/a>"],[100,1,"<a href=\"OptionsPage\/Tab\/General.php.html#27\">Buma\\OptionsPage\\Tab\\General::section<\/a>"],[0,1,"<a href=\"OptionsPage\/Tab\/General.php.html#39\">Buma\\OptionsPage\\Tab\\General::slide_home<\/a>"],[100,1,"<a href=\"PluginOptions.php.html#36\">Buma\\PluginOptions::__construct<\/a>"],[100,1,"<a href=\"PluginOptions.php.html#53\">Buma\\PluginOptions::has_filter<\/a>"],[100,3,"<a href=\"PluginOptions.php.html#67\">Buma\\PluginOptions::create<\/a>"],[100,4,"<a href=\"PluginOptions.php.html#100\">Buma\\PluginOptions::get<\/a>"],[100,1,"<a href=\"PluginOptions.php.html#118\">Buma\\PluginOptions::__get<\/a>"],[100,1,"<a href=\"PluginOptions.php.html#129\">Buma\\PluginOptions::get_name<\/a>"],[0,1,"<a href=\"QueryVars.php.html#18\">Buma\\QueryVars::__construct<\/a>"],[0,1,"<a href=\"QueryVars.php.html#29\">Buma\\QueryVars::filter_vars<\/a>"],[0,3,"<a href=\"QueryVars.php.html#43\">Buma\\QueryVars::filter_groups<\/a>"],[0,1,"<a href=\"QueryVars.php.html#61\">Buma\\QueryVars::clean<\/a>"],[0,3,"<a href=\"QueryVars.php.html#73\">Buma\\QueryVars::add<\/a>"],[100,2,"<a href=\"Registry.php.html#25\">Buma\\Registry::create<\/a>"],[100,1,"<a href=\"Registry.php.html#43\">Buma\\Registry::set<\/a>"],[100,1,"<a href=\"Registry.php.html#57\">Buma\\Registry::get<\/a>"],[0,1,"<a href=\"Registry.php.html#68\">Buma\\Registry::has<\/a>"],[100,1,"<a href=\"Rewrites.php.html#33\">Buma\\Rewrites::__construct<\/a>"],[100,1,"<a href=\"Rewrites.php.html#46\">Buma\\Rewrites::init<\/a>"],[0,1,"<a href=\"Rewrites.php.html#63\">Buma\\Rewrites::add<\/a>"],[0,1,"<a href=\"Rewrites.php.html#78\">Buma\\Rewrites::query_vars<\/a>"],[0,2,"<a href=\"Rewrites.php.html#91\">Buma\\Rewrites::request<\/a>"],[100,2,"<a href=\"Route.php.html#34\">Buma\\Route::__construct<\/a>"],[100,1,"<a href=\"Route.php.html#55\">Buma\\Route::init<\/a>"],[100,1,"<a href=\"Route.php.html#68\">Buma\\Route::add_hooks<\/a>"],[0,1,"<a href=\"Route.php.html#106\">Buma\\Route::set_request<\/a>"],[100,1,"<a href=\"Route.php.html#115\">Buma\\Route::get_data<\/a>"],[100,1,"<a href=\"Route.php.html#124\">Buma\\Route::add_rewrite_rule<\/a>"],[100,1,"<a href=\"Route.php.html#130\">Buma\\Route::wp_structured_data<\/a>"],[100,1,"<a href=\"Route.php.html#137\">Buma\\Route::wp_title<\/a>"],[100,1,"<a href=\"Route.php.html#144\">Buma\\Route::wp_description<\/a>"],[100,1,"<a href=\"Route.php.html#153\">Buma\\Route::the_content<\/a>"],[0,1,"<a href=\"Route.php.html#160\">Buma\\Route::add_analytics<\/a>"],[0,1,"<a href=\"Route.php.html#169\">Buma\\Route::query_vars<\/a>"],[0,1,"<a href=\"Route.php.html#178\">Buma\\Route::wp_canonical<\/a>"],[100,1,"<a href=\"Route.php.html#190\">Buma\\Route::wp_og_image<\/a>"],[0,1,"<a href=\"Route.php.html#198\">Buma\\Route::wp_seo_content<\/a>"],[0,1,"<a href=\"Route.php.html#209\">Buma\\Route::template_include<\/a>"],[0,1,"<a href=\"Route.php.html#224\">Buma\\Route::sanitize_classname<\/a>"],[0,1,"<a href=\"Route.php.html#235\">Buma\\Route::get_locale<\/a>"],[0,1,"<a href=\"Route.php.html#246\">Buma\\Route::build_uri<\/a>"],[100,1,"<a href=\"Route.php.html#257\">Buma\\Route::the_uri<\/a>"],[0,3,"<a href=\"Route.php.html#269\">Buma\\Route::flatten<\/a>"],[0,1,"<a href=\"Route.php.html#288\">Buma\\Route::get_query_var<\/a>"],[0,2,"<a href=\"Route.php.html#299\">Buma\\Route::set_404<\/a>"],[100,1,"<a href=\"Route.php.html#325\">Buma\\Route::admin_bar_menu<\/a>"],[100,1,"<a href=\"Route.php.html#340\">Buma\\Route::wp<\/a>"],[0,4,"<a href=\"Route.php.html#411\">Buma\\Route::post_link<\/a>"],[0,1,"<a href=\"Route.php.html#425\">Buma\\Route::get_slug<\/a>"],[0,1,"<a href=\"Route\/Builder.php.html#20\">Buma\\Route\\Builder::init<\/a>"],[0,1,"<a href=\"Route\/RoomSearch.php.html#11\">Buma\\Route\\RoomSearch::get_data<\/a>"],[0,1,"<a href=\"Route\/RoomSearch.php.html#16\">Buma\\Route\\RoomSearch::add_rewrite_rule<\/a>"],[0,1,"<a href=\"Route\/RoomSearch.php.html#23\">Buma\\Route\\RoomSearch::wp_structured_data<\/a>"],[0,1,"<a href=\"Route\/RoomSearch.php.html#32\">Buma\\Route\\RoomSearch::wp_title<\/a>"],[0,1,"<a href=\"Route\/RoomSearch.php.html#41\">Buma\\Route\\RoomSearch::wp_description<\/a>"],[0,1,"<a href=\"Route\/RoomSearch.php.html#52\">Buma\\Route\\RoomSearch::the_content<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

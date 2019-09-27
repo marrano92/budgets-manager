@@ -1,0 +1,29 @@
+{
+    "name": "drivek/ktoolbox",
+    "description": "A set of namespaced utility classes you can use to develop your stuff.",
+    "type": "wordpress-muplugin",
+    "license": "GPL2",
+    "authors": [
+        {
+            "name": "riccardooliva",
+            "email": "riccardo.oliva@drivek.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "KToolbox\\": "src"
+        },
+        "psr-0": {
+            "KToolboxTests\\": "tests/src"
+        }
+    },
+    "require-dev": {
+        "10up/wp_mock": "0.3.0",
+        "phpunit/phpunit": "^6.5",
+        "phpmetrics/phpmetrics": "^2.4"
+    },
+    "scripts": {
+        "coverage": "./vendor/bin/phpunit --coverage-html ./test-reports/coverage",
+        "metrics": "phpmetrics --report-html=./test-reports/metrics --exclude-dirs=./.git,./test-reports,./tests ."
+    }
+}

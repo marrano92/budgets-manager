@@ -1,0 +1,8 @@
+/vendor/
+/.idea/
+/docs/
+/test-reports/
+*.pot
+*.po
+*.mo
+.phpunit.result.cache
