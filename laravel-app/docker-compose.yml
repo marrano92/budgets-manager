@@ -19,6 +19,7 @@ services:
       - ./nginx/conf.d/:/etc/nginx/conf.d/
     networks:
       - app-network
+    user: "1001:1001"
 
   #Nginx Service
   webserver:

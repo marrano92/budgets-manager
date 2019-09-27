@@ -12,3 +12,14 @@ Before you start, you will need:
 - One Ubuntu 18.04 server, and a non-root user with sudo privileges. Follow the Initial Server Setup with Ubuntu 18.04 tutorial to set this up.
 - Docker installed, following Steps 1 and 2 of How To Install and Use Docker on Ubuntu 18.04.
 - Docker Compose installed, following Step 1 of How To Install Docker Compose on Ubuntu 18.04.
+
+Check user id and group id:
+
+```
+$ id -u  && id -g
+```
+
+after this add user and group with this property in a docker-composer 
+
+``user: "1001:1001"``
+
