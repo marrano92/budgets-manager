@@ -6,7 +6,7 @@
 
 # Budgets-manager
 
-###Prerequisites
+### Prerequisites
 Before you start, you will need:
 
 - One Ubuntu 18.04 server, and a non-root user with sudo privileges. Follow the Initial Server Setup with Ubuntu 18.04 tutorial to set this up.
