@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d6d84cf-e886-4a73-b9c3-294d7eb61fb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-    </list>
+    <list default="true" id="5d6d84cf-e886-4a73-b9c3-294d7eb61fb7" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +15,7 @@
     </execution>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/kontent" />
   </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
@@ -231,7 +227,7 @@
       <workItem from="1571592385642" duration="19000" />
       <workItem from="1571592654425" duration="580000" />
       <workItem from="1573224358246" duration="10379000" />
-      <workItem from="1573571185735" duration="5914000" />
+      <workItem from="1573571185735" duration="6227000" />
     </task>
     <servers />
   </component>
