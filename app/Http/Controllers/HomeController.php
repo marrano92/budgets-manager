@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use Illuminate\Support\Facades\Auth;
+use Laravel\Socialite\Facades\Socialite;
+
 class HomeController extends Controller {
     /**
      * Create a new controller instance.
@@ -18,6 +22,8 @@ class HomeController extends Controller {
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index() {
-        return view( 'home' );
+        $user = Auth::user();
+
+        return view( 'home', [ 'name' => $user->name, 'email' => $user->email  ] );
     }
 }

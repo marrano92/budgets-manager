@@ -8,6 +8,7 @@
                     <div class="card-header">Dashboard</div>
                     <div class="card-body">
                         <h1>Hello, {{ $name ?? '' }}</h1>
+                        <h2>This is your email: {{$email}}</h2>
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('status') }}
