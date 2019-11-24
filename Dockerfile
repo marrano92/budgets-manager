@@ -47,7 +47,7 @@ RUN rm -r $APP_HOME
 RUN mkdir -p $APP_HOME/public
 
 # change uid and gid of apache to docker user uid/gid
-RUN usermod -u 1000 www-data && groupmod -g 1000 www-data
+RUN usermod -u 1001 www-data && groupmod -g 1001 www-data
 RUN chown -R www-data:www-data $APP_HOME
 
 # put apache and php config for Laravel, enable sites
