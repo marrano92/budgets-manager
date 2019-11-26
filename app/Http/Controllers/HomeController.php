@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Support\Facades\Auth;
-use Laravel\Socialite\Facades\Socialite;
 
 class HomeController extends Controller {
     /**
@@ -24,6 +23,6 @@ class HomeController extends Controller {
     public function index() {
         $user = Auth::user();
 
-        return view( 'home', [ 'name' => $user->name, 'email' => $user->email  ] );
+        return view( 'home', [ 'name' => $user->name, 'email' => $user->email, 'token' => $token   ] );
     }
 }
