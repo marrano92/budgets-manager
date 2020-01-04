@@ -2,17 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
-use Illuminate\Support\Facades\Auth;
-
-class HomeController extends Controller {
+class AppController extends Controller {
     /**
      * Create a new controller instance.
      *
      * @return void
      */
     public function __construct() {
-        $this->middleware( 'auth' );
+       // $this->middleware( 'auth' );
     }
 
     /**
@@ -21,8 +18,6 @@ class HomeController extends Controller {
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index() {
-        $user = Auth::user();
-
-        return view( 'home', [ 'name' => $user->name, 'email' => $user->email, 'token' => $token   ] );
+        return view( 'home' );
     }
 }
