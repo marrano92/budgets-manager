@@ -2,4 +2,7 @@
 
 Auth::routes();
 
-Route::get( '/{any}', 'AppController@index' )->where( 'any', '.*' );
+Route::get( '/redirect', 'SocialAuthGoogleController@redirect' );
+Route::get( '/callback', 'SocialAuthGoogleController@callback' );
+
+Route::get( '/', 'HomeController@index' )->name( 'home' );

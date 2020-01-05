@@ -10,7 +10,7 @@ class SocialAuthGoogleController extends Controller {
     /**
      * Create a redirect method to google api.
      *
-     * @return void
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function redirect() {
         return Socialite::driver( 'google' )->redirect();
@@ -19,7 +19,7 @@ class SocialAuthGoogleController extends Controller {
     /**
      * Return a callback method from google api.
      *
-     * @return callback URL from google
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function callback() {
         $service = new SocialGoogleAccountService();

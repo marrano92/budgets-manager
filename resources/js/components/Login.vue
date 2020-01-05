@@ -1,7 +1,9 @@
-@extends('layouts.app')
-
-@section('content')
-    <div class="mx-auto h-full flex justify-center items-center">
+<template>
+    <div class="mx-auto h-full flex justify-center items-center bg-black-grey-mk">
+        <p>
+            <router-link :to="{ name: 'home' }">Home</router-link> |
+            <router-link :to="{ name: 'login' }">Login</router-link>
+        </p>
         <div class="w-96 bg-grey-mk rounded-lg shadow-lg p-6">
 
             <svg class="w-32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -72,18 +74,20 @@
 
             <h1 class="text-black-grey-mk text-2xl pt-10">Welcome to MotorKBudgets</h1>
             <h2 class="text-grey-200 pt-1">Login to manage your annual budgets</h2>
-                <div class="form-group row mb-0 pt-10">
-                    <div class="col-md-8 offset-md-4">
-                        <a href="{{url('/redirect')}}" class="btn btn-primary">
-                            <button
-                                class="bg-red-mk hover:bg-red-dark-mk text-white font-bold py-2 px-4 border border-red-mk rounded">
-                                <img width="20" class="mr-2 float-left" alt="Google Logo"
-                                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png">
-                               <span>{{ __('Login with Google') }}</span>
-                            </button>
-                        </a>
-                    </div>
+            <div class="form-group row mb-0 pt-10">
+                <div class="col-md-8 offset-md-4">
+                    <div id="my-signin2"></div>
                 </div>
+            </div>
         </div>
     </div>
-@endsection
+</template>
+
+<script>
+    export default {
+        name: "Login",
+    }
+</script>
+
+<style scoped>
+</style>
