@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class="h-screen bg-black-gray-mk">
     <div class="mx-auto h-full flex justify-center items-center">
-        <div class="w-96 bg-grey-mk rounded-lg shadow-lg p-6">
-
+        <div class="w-96 bg-gray-mk rounded-lg shadow-lg p-6">
             <svg class="w-32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                  viewBox="0 0 195 82">
                 <title>SVG logo combined with the W3C logo, set horizontally</title>
@@ -69,8 +69,7 @@
                     </g>
                 </g>
             </svg>
-
-            <h1 class="text-black-grey-mk text-2xl pt-10">Welcome to MotorKBudgets</h1>
+            <h1 class="text-black-gray-mktext-2xl pt-10">Welcome to MotorKBudgets</h1>
             <h2 class="text-grey-200 pt-1">Login to manage your annual budgets</h2>
                 <div class="form-group row mb-0 pt-10">
                     <div class="col-md-8 offset-md-4">
@@ -85,5 +84,6 @@
                     </div>
                 </div>
         </div>
+    </div>
     </div>
 @endsection
