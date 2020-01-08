@@ -10,8 +10,8 @@
                         <thead class="text-white">
                         @foreach($expenses as $expense)
                             <tr class="bg-teal-400 flex flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0">
-                                <th class="p-3 text-left">Name</th>
-                                <th class="p-3 text-left">Email</th>
+                                <th class="p-3 text-left">{{__('Name')}}</th>
+                                <th class="p-3 text-left">{{__('Email')}}</th>
                                 <th class="p-3 text-left" width="110px"></th>
                                 <th class="p-3 text-left" width="110px"></th>
                             </tr>

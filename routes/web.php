@@ -7,5 +7,5 @@ Route::get( '/callback', 'SocialAuthGoogleController@callback' );
 
 Route::get( '/', 'HomeController@index' )->name( 'home' );
 
-Route::get( '/expense', 'ExpenseController@index' );
-Route::get( '/expense/{id}', 'ExpenseController@show' );
+Route::get( '/expense', 'ExpenseController@index' )->name('expense');
+Route::get( '/expense/{id}', 'ExpenseController@show' )->name('single-expense' );

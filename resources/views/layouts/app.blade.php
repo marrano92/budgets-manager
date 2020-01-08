@@ -31,10 +31,29 @@
 @else
     <nav id="header" class="bg-white fixed w-full z-10 top-0 shadow">
         <div class="w-full container mx-auto flex flex-wrap items-center mt-0 pt-3 pb-3 lg:pb-0">
-            <div class="w-1/2 pl-2 md:pl-0 sm:pl-4">
+            <div class="w-full pl-2 md:pl-0 sm:pl-4">
                 <a class="text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-bold" href="#">
-                    <i class="fas fa-sun text-red-mk pr-3"></i>Motork Budgets
+                    <img class="w-5 m-1 rounded-full float-left" src="{{asset('img/motork-profile.png')}}" alt="logo">Motork Budgets
                 </a>
+            </div>
+            <div class="w-1/2 flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white z-20"
+                 id="nav-content">
+                <ul class="list-reset lg:flex flex-1 items-center px-4 md:px-0">
+                    <li class="mr-6 my-2 md:my-0">
+                        <a href="#"
+                           class="block py-1 md:py-3 pl-1 pr-3 align-middle @if(Route::currentRouteName() === 'home') text-red-mk border-red-mk @else text-gray-500 border-white  @endif hover:text-red-dark-mk hover:border-red-dark-mk no-underline border-b-2">
+                            <i class="fas fa-home fa-fw mr-3 @if(Route::currentRouteName() === 'home') text-red-mk @endif"></i><span
+                                class="pb-1 md:pb-0 text-sm">{{__('Home')}}</span>
+                        </a>
+                    </li>
+                    <li class="mr-6 my-2 md:my-0">
+                        <a href="#"
+                           class="block py-1 md:py-3 pl-1 pr-3  @if(Route::currentRouteName() === 'expense') text-red-mk border-red-mk @else text-gray-500 border-white @endif hover:text-red-dark-mk hover:border-red-dark-mk align-middle no-underline border-b-2">
+                            <i class="fa fa-wallet fa-fw mr-3 @if(Route::currentRouteName() === 'expense') text-red-mk @endif"></i><span
+                                class="pb-1 md:pb-0 text-sm">{{__('Expense')}}</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
             <div class="w-1/2 pr-0">
                 <div class="flex relative inline-block md:float-none lg:float-right xl:float-right">
@@ -88,27 +107,6 @@
                         </button>
                     </div>
                 </div>
-
-            </div>
-            <div
-                class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white z-20"
-                id="nav-content">
-                <ul class="list-reset lg:flex flex-1 items-center px-4 md:px-0">
-                    <li class="mr-6 my-2 md:my-0">
-                        <a href="#"
-                           class="block py-1 md:py-3 pl-1 align-middle text-red-mk no-underline hover:text-gray-900 border-b-2 border-orange-600 hover:border-orange-600">
-                            <i class="fas fa-home fa-fw mr-3 text-red-mk"></i><span
-                                class="pb-1 md:pb-0 text-sm">{{__('Home')}}</span>
-                        </a>
-                    </li>
-                    <li class="mr-6 my-2 md:my-0">
-                        <a href="#"
-                           class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-red-500">
-                            <i class="fa fa-wallet fa-fw mr-3"></i><span
-                                class="pb-1 md:pb-0 text-sm">{{__('Expense')}}</span>
-                        </a>
-                    </li>
-                </ul>
             </div>
         </div>
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -117,106 +115,108 @@
     </nav>
 @endguest
 @yield('content')
-<footer class="bg-white border-t border-gray-400 shadow">
-    <div class="container max-w-md mx-auto flex py-8">
+@guest
+@else
+    <footer class="bg-white border-t border-gray-400 shadow">
+        <div class="container max-w-md mx-auto flex py-8">
 
-        <div class="w-full mx-auto flex flex-wrap">
-            <div class="flex w-full md:w-1/2 ">
-                <div class="px-8">
-                    <h3 class="font-bold font-bold text-gray-900">About</h3>
-                    <p class="py-4 text-gray-600 text-sm">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel mi ut felis tempus commodo
-                        nec id erat. Suspendisse consectetur dapibus velit ut lacinia.
-                    </p>
+            <div class="w-full mx-auto flex flex-wrap">
+                <div class="flex w-full md:w-1/2 ">
+                    <div class="px-8">
+                        <h3 class="font-bold font-bold text-gray-900">About</h3>
+                        <p class="py-4 text-gray-600 text-sm">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel mi ut felis tempus
+                            commodo
+                            nec id erat. Suspendisse consectetur dapibus velit ut lacinia.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex w-full md:w-1/2">
+                    <div class="px-8">
+                        <h3 class="font-bold font-bold text-gray-900">Social</h3>
+                        <ul class="list-reset items-center text-sm pt-3">
+                            <li>
+                                <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1"
+                                   href="#">Add social link</a>
+                            </li>
+                            <li>
+                                <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1"
+                                   href="#">Add social link</a>
+                            </li>
+                            <li>
+                                <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1"
+                                   href="#">Add social link</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="flex w-full md:w-1/2">
-                <div class="px-8">
-                    <h3 class="font-bold font-bold text-gray-900">Social</h3>
-                    <ul class="list-reset items-center text-sm pt-3">
-                        <li>
-                            <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1"
-                               href="#">Add social link</a>
-                        </li>
-                        <li>
-                            <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1"
-                               href="#">Add social link</a>
-                        </li>
-                        <li>
-                            <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1"
-                               href="#">Add social link</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+
         </div>
+    </footer>
+    <script>
+        /*Toggle dropdown list*/
+        /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
 
+        var userMenuDiv = document.getElementById("userMenu");
+        var userMenu = document.getElementById("userButton");
 
-    </div>
-</footer>
-<script>
+        var navMenuDiv = document.getElementById("nav-content");
+        var navMenu = document.getElementById("nav-toggle");
 
+        document.onclick = check;
 
-    /*Toggle dropdown list*/
-    /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+        function check(e) {
+            var target = (e && e.target) || (event && event.srcElement);
 
-    var userMenuDiv = document.getElementById("userMenu");
-    var userMenu = document.getElementById("userButton");
-
-    var navMenuDiv = document.getElementById("nav-content");
-    var navMenu = document.getElementById("nav-toggle");
-
-    document.onclick = check;
-
-    function check(e) {
-        var target = (e && e.target) || (event && event.srcElement);
-
-        //User Menu
-        if (!checkParent(target, userMenuDiv)) {
-            // click NOT on the menu
-            if (checkParent(target, userMenu)) {
-                // click on the link
-                if (userMenuDiv.classList.contains("invisible")) {
-                    userMenuDiv.classList.remove("invisible");
+            //User Menu
+            if (!checkParent(target, userMenuDiv)) {
+                // click NOT on the menu
+                if (checkParent(target, userMenu)) {
+                    // click on the link
+                    if (userMenuDiv.classList.contains("invisible")) {
+                        userMenuDiv.classList.remove("invisible");
+                    } else {
+                        userMenuDiv.classList.add("invisible");
+                    }
                 } else {
+                    // click both outside link and outside menu, hide menu
                     userMenuDiv.classList.add("invisible");
                 }
-            } else {
-                // click both outside link and outside menu, hide menu
-                userMenuDiv.classList.add("invisible");
             }
-        }
 
-        //Nav Menu
-        if (!checkParent(target, navMenuDiv)) {
-            // click NOT on the menu
-            if (checkParent(target, navMenu)) {
-                // click on the link
-                if (navMenuDiv.classList.contains("hidden")) {
-                    navMenuDiv.classList.remove("hidden");
+            //Nav Menu
+            if (!checkParent(target, navMenuDiv)) {
+                // click NOT on the menu
+                if (checkParent(target, navMenu)) {
+                    // click on the link
+                    if (navMenuDiv.classList.contains("hidden")) {
+                        navMenuDiv.classList.remove("hidden");
+                    } else {
+                        navMenuDiv.classList.add("hidden");
+                    }
                 } else {
+                    // click both outside link and outside menu, hide menu
                     navMenuDiv.classList.add("hidden");
                 }
-            } else {
-                // click both outside link and outside menu, hide menu
-                navMenuDiv.classList.add("hidden");
             }
+
         }
 
-    }
-
-    function checkParent(t, elm) {
-        while (t.parentNode) {
-            if (t == elm) {
-                return true;
+        function checkParent(t, elm) {
+            while (t.parentNode) {
+                if (t == elm) {
+                    return true;
+                }
+                t = t.parentNode;
             }
-            t = t.parentNode;
+            return false;
         }
-        return false;
-    }
 
 
-</script>
+    </script>
+@endguest
 </body>
 </html>
