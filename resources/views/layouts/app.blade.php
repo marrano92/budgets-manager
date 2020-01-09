@@ -17,9 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-    <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
-    <!--Replace with your tailwind.css once created-->
-    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <!--Totally optional :) -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"
             integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
 
@@ -31,29 +29,11 @@
 @else
     <nav id="header" class="bg-white fixed w-full z-10 top-0 shadow">
         <div class="w-full container mx-auto flex flex-wrap items-center mt-0 pt-3 pb-3 lg:pb-0">
-            <div class="w-full pl-2 md:pl-0 sm:pl-4">
+            <div class="w-1/2 pl-2 md:pl-0 sm:pl-4">
                 <a class="text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-bold" href="#">
-                    <img class="w-5 m-1 rounded-full float-left" src="{{asset('img/motork-profile.png')}}" alt="logo">Motork Budgets
+                    <img class="w-5 m-1 rounded-full float-left" src="{{asset('img/motork-profile.png')}}" alt="logo">Motork
+                    Budgets
                 </a>
-            </div>
-            <div class="w-1/2 flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white z-20"
-                 id="nav-content">
-                <ul class="list-reset lg:flex flex-1 items-center px-4 md:px-0">
-                    <li class="mr-6 my-2 md:my-0">
-                        <a href="#"
-                           class="block py-1 md:py-3 pl-1 pr-3 align-middle @if(Route::currentRouteName() === 'home') text-red-mk border-red-mk @else text-gray-500 border-white  @endif hover:text-red-dark-mk hover:border-red-dark-mk no-underline border-b-2">
-                            <i class="fas fa-home fa-fw mr-3 @if(Route::currentRouteName() === 'home') text-red-mk @endif"></i><span
-                                class="pb-1 md:pb-0 text-sm">{{__('Home')}}</span>
-                        </a>
-                    </li>
-                    <li class="mr-6 my-2 md:my-0">
-                        <a href="#"
-                           class="block py-1 md:py-3 pl-1 pr-3  @if(Route::currentRouteName() === 'expense') text-red-mk border-red-mk @else text-gray-500 border-white @endif hover:text-red-dark-mk hover:border-red-dark-mk align-middle no-underline border-b-2">
-                            <i class="fa fa-wallet fa-fw mr-3 @if(Route::currentRouteName() === 'expense') text-red-mk @endif"></i><span
-                                class="pb-1 md:pb-0 text-sm">{{__('Expense')}}</span>
-                        </a>
-                    </li>
-                </ul>
             </div>
             <div class="w-1/2 pr-0">
                 <div class="flex relative inline-block md:float-none lg:float-right xl:float-right">
@@ -107,6 +87,30 @@
                         </button>
                     </div>
                 </div>
+            </div>
+            <div class="w-4/5 lg:w-4/5 flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white z-20"
+                 id="nav-content">
+                <ul class="list-reset lg:flex flex-1 items-center px-4 md:px-0">
+                    <li class="mr-6 my-2 md:my-0">
+                        <a href="{{ route('home') }}"
+                           class="block py-1 md:py-3 pl-1 pr-3 align-middle @if(Route::currentRouteName() === 'home') text-red-mk border-red-mk @else text-gray-500 border-white  @endif hover:text-red-dark-mk hover:border-red-dark-mk no-underline border-b-2">
+                            <i class="fas fa-home fa-fw mr-3 @if(Route::currentRouteName() === 'home') text-red-mk @endif"></i><span
+                                class="pb-1 md:pb-0 text-sm">{{__('Home')}}</span>
+                        </a>
+                    </li>
+                    <li class="mr-6 my-2 md:my-0">
+                        <a href="{{ route('expense') }}"
+                           class="block py-1 md:py-3 pl-1 pr-3  @if(Route::currentRouteName() === 'expense' || Route::currentRouteName() === 'single-expense' ) text-red-mk border-red-mk @else text-gray-500 border-white @endif hover:text-red-dark-mk hover:border-red-dark-mk align-middle no-underline border-b-2">
+                            <i class="fa fa-wallet fa-fw mr-3 @if(Route::currentRouteName() === 'expense' || Route::currentRouteName() === 'single-expense') text-red-mk @endif"></i><span
+                                class="pb-1 md:pb-0 text-sm">{{__('Expense')}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="w-1/5 lg:w-1/5 flex-grow float-right lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white z-20">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Button
+                </button>
             </div>
         </div>
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

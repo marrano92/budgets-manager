@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
 class ExpenseController extends Controller {
+
+    public function __construct() {
+        $this->middleware( 'auth' );
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -21,10 +26,10 @@ class ExpenseController extends Controller {
     /**
      * Show the form for creating a new resource.
      *
-     * @return Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function create() {
-        //
+        return view( 'expense.create' );
     }
 
     /**
