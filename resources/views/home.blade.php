@@ -1,12 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <!--Container-->
-    <div class="container w-full mx-auto pt-20">
-        <div class="w-full px-4 md:px-0 md:mt-8 sm:mt-0 mb-16 text-gray-800 leading-normal">
-
-            <!--Console Content-->
-
             <div class="flex flex-wrap">
                 <div class="w-full md:w-1/2 xl:w-1/3 p-3">
                     <!--Metric Card-->
@@ -109,10 +103,8 @@
                     <!--/Metric Card-->
                 </div>
             </div>
-
             <!--Divider-->
             <hr class="border-b-2 border-gray-400 my-8 mx-4">
-
             <div class="flex flex-row flex-wrap flex-grow mt-2">
 
                 <div class="w-full md:w-1/2 p-3">
@@ -307,10 +299,4 @@
 
 
             </div>
-
-            <!--/ Console Content-->
-
-        </div>
-    </div>
-    <!--/container-->
 @endsection

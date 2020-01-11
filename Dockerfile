@@ -21,6 +21,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
       nano \
       git \
       unzip \
+      iputils-ping \
       libicu-dev \
       zlib1g-dev \
       libxml2 \
@@ -91,8 +92,8 @@ COPY --chown=www-data:www-data . $APP_HOME/
 COPY --chown=www-data:www-data .env.$ENV $APP_HOME/.env
 
 # install all PHP dependencies
-RUN if [ "$BUILD_ARGUMENT_ENV" = "dev" ] || [ "$BUILD_ARGUMENT_ENV" = "test" ]; then composer install --no-interaction --no-progress; \
-    else composer install --no-interaction --no-progress --no-dev; \
-    fi
+#RUN if [ "$BUILD_ARGUMENT_ENV" = "dev" ] || [ "$BUILD_ARGUMENT_ENV" = "test" ]; then composer install --no-interaction --no-progress; \
+#    else composer install --no-interaction --no-progress --no-dev; \
+#    fi
 
 USER root

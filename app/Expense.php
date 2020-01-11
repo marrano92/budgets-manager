@@ -13,4 +13,6 @@ class Expense extends Model {
     // Timestamps
     public $timestamps = true;
 
+    protected $fillable = ['user_id'];
+
 }

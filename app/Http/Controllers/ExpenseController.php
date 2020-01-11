@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Expense;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Routing\Redirector;
+use Illuminate\Validation\ValidationException;
 
 class ExpenseController extends Controller {
 
@@ -18,7 +20,8 @@ class ExpenseController extends Controller {
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index() {
-        $expenses = Expense::all();
+        $query    = Expense::query();
+        $expenses = $query->where( 'user_id', '=', \Auth::id() )->get();
 
         return view( 'expense.index' )->with( 'expenses', $expenses );
     }
@@ -37,10 +40,28 @@ class ExpenseController extends Controller {
      *
      * @param Request $request
      *
-     * @return Response
+     * @return Redirector
+     * @throws ValidationException
      */
     public function store( Request $request ) {
-        //
+        $this->validate( $request, [
+            'title'       => 'required',
+            'value'       => 'required',
+            'description' => 'required',
+            'type'        => 'required',
+            'state'        => 'required',
+        ] );
+
+        $expense              = new Expense;
+        $expense->title       = $request->input( 'title' );
+        $expense->value       = $request->input( 'value' );
+        $expense->description = $request->input( 'description' );
+        $expense->type        = $request->input( 'type' );
+        $expense->state       = $request->input( 'state' );
+        $expense->user_id     = \Auth::id();
+        $expense->save();
+
+        return redirect( '/expense' )->with( 'success', 'Expense created' );
     }
 
     /**

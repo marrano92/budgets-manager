@@ -5,8 +5,11 @@ Auth::routes();
 Route::get( '/redirect', 'SocialAuthGoogleController@redirect' );
 Route::get( '/callback', 'SocialAuthGoogleController@callback' );
 
-Route::get( '/', 'HomeController@index' )->name( 'home' );
+Route::get( '/', 'HomeController@index' )->name( 'home.index' );
 
-Route::get( '/expense', 'ExpenseController@index' )->name('expense');
-Route::get( '/expense/{id}', 'ExpenseController@show' )->name('single-expense' );
-Route::get( '/new-expense/', 'ExpenseController@create' )->name('new-expense' );
+Route::prefix( 'expense' )->group( function () {
+    Route::get( '/', 'ExpenseController@index' )->name( 'expense.index' );
+    Route::get( '/create', 'ExpenseController@create' )->name( 'expense.create' );
+    Route::get( '/{expense}', 'ExpenseController@show' )->name( 'expense.show' );
+    Route::post( '/', 'ExpenseController@store' )->name( 'expense.store' );
+} );
