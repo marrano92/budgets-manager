@@ -17,8 +17,6 @@ class CreateExpensesTable extends Migration
             $table->bigIncrements('id');
             $table->integer('user_id');
             $table->integer('type');
-            $table->date('start_date');
-            $table->date('end_date');
             $table->integer('value');
             $table->string('title');
             $table->mediumText('description');

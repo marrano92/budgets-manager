@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Expense;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Redirector;
 use Illuminate\Validation\ValidationException;
+use Illuminate\View\View;
 
 class ExpenseController extends Controller {
 
@@ -17,19 +19,24 @@ class ExpenseController extends Controller {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return Factory|View
      */
     public function index() {
         $query    = Expense::query();
         $expenses = $query->where( 'user_id', '=', \Auth::id() )->get();
+        $total    = 0;
 
-        return view( 'expense.index' )->with( 'expenses', $expenses );
+        foreach ( $expenses as $expense ) {
+            $total = $total + $expense->value;
+        }
+
+        return view( 'expense.index' )->with( [ 'obj' => (object) [ 'expenses' => $expenses, 'total' => $total ] ] );
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return Factory|View
      */
     public function create() {
         return view( 'expense.create' );
@@ -38,7 +45,7 @@ class ExpenseController extends Controller {
     /**
      * Store a newly created resource in storage.
      *
-     * @param Request $request
+     * @param  Request  $request
      *
      * @return Redirector
      * @throws ValidationException
@@ -49,13 +56,13 @@ class ExpenseController extends Controller {
             'value'       => 'required',
             'description' => 'required',
             'type'        => 'required',
-            'state'        => 'required',
+            'state'       => 'required',
         ] );
 
         $expense              = new Expense;
         $expense->title       = $request->input( 'title' );
         $expense->value       = $request->input( 'value' );
-        $expense->description = $request->input( 'description' );
+        $expense->description = $requeexpensesst->input( 'description' );
         $expense->type        = $request->input( 'type' );
         $expense->state       = $request->input( 'state' );
         $expense->user_id     = \Auth::id();
@@ -67,9 +74,9 @@ class ExpenseController extends Controller {
     /**
      * Display the specified resource.
      *
-     * @param int $id
+     * @param  int  $id
      *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return Factory|View
      */
     public function show( $id ) {
         $expenses = Expense::all();
@@ -81,7 +88,7 @@ class ExpenseController extends Controller {
     /**
      * Show the form for editing the specified resource.
      *
-     * @param int $id
+     * @param  int  $id
      *
      * @return Response
      */
@@ -92,8 +99,8 @@ class ExpenseController extends Controller {
     /**
      * Update the specified resource in storage.
      *
-     * @param Request $request
-     * @param int $id
+     * @param  Request  $request
+     * @param  int  $id
      *
      * @return void
      */
@@ -104,7 +111,7 @@ class ExpenseController extends Controller {
     /**
      * Remove the specified resource from storage.
      *
-     * @param int $id
+     * @param  int  $id
      *
      * @return Response
      */
