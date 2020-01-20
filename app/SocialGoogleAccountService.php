@@ -25,17 +25,19 @@ class SocialGoogleAccountService {
                         'email'    => $providerUser->getEmail(),
                         'name'     => $providerUser->getName(),
                         'password' => md5( rand( 1, 10000 ) ),
+                        'image'    => $providerUser->getAvatar(),
                     ] );
                 }
+
                 $account->user()->associate( $user );
                 $account->save();
             }
-        } catch (\Exception $exception) {
-            var_dump($exception->getMessage());
+        } catch ( \Exception $exception ) {
+            var_dump( $exception->getMessage() );
             die;
         }
 
-            return $user;
-        }
+        return $user;
+    }
 
 }

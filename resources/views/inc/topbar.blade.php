@@ -26,7 +26,7 @@
                          class="bg-white rounded shadow-md mt-2 absolute mt-12 top-0 right-0 min-w-full overflow-auto z-30 lg:mr-8 invisible">
                         <ul class="list-reset">
                             <li>
-                                <a href="#"
+                                <a href="{{route('user.index')}}"
                                    class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">
                                     {{ __('My account') }}
                                 </a>
