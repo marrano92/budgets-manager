@@ -6,6 +6,11 @@ module.exports = {
                 '120': '30rem',
                 '56': '14rem',
             },
+            height: {
+                '96': '24rem',
+                '120': '30rem',
+                '56': '14rem',
+            },
             colors: {
                 'gray-mk': '#ffffffcc',
                 'black-gray-mk': '#2e3843',

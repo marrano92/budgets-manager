@@ -50,11 +50,12 @@ $tot = $obj->total;
                         <td class="border-grey-light border hover:bg-gray-100 text-right p-3 truncate">
                             {{$expense->value}} €
                         </td>
-                        <td class="border-grey-light border hover:bg-gray-100 text-center p-3 truncate"> <?php if ( $expense->state == 1 ) {
-                                echo '<i class="fas fa-thumbs-up text-green-600"></i> <span class="text-green-600 font-bold">Approved</span>';
-                            } else {
-                                echo '<i class="fas fa-thumbs-down text-red-600"></i> <span class="text-red-600 font-bold">Not Approved</span>';
-                            } ?> </td>
+                        <td class="border-grey-light border hover:bg-gray-100 text-center p-3 truncate">
+                            <i class="fas fa-thumbs-up @if($expense->state =1) text-green-600 @else text-red-600 @endif"></i>
+                            <span class="text-green-600 font-bold">
+                                @if($expense->state == 1) Approved @else Not approved @endif
+                            </span>
+                        </td>
                         <td class="border-grey-light border hover:bg-gray-100 text-red-400 hover:text-red-600 hover:font-medium">
                             <a class="px-3" href="#delete">Delete</a>
                         </td>

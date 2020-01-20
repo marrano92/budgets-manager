@@ -13,3 +13,7 @@ Route::prefix( 'expense' )->group( function () {
     Route::get( '/{expense}', 'ExpenseController@show' )->name( 'expense.show' );
     Route::post( '/', 'ExpenseController@store' )->name( 'expense.store' );
 } );
+
+Route::prefix( 'user' )->group( function () {
+    Route::get( '/', 'UserController@index' )->name( 'user.index' );
+} );

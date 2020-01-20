@@ -22,8 +22,7 @@ class ExpenseController extends Controller {
      * @return Factory|View
      */
     public function index() {
-        $query    = Expense::query();
-        $expenses = $query->where( 'user_id', '=', \Auth::id() )->get();
+        $expenses    = Expense::where( 'user_id', '=', \Auth::id() )->get();
         $total    = 0;
 
         foreach ( $expenses as $expense ) {
@@ -62,7 +61,7 @@ class ExpenseController extends Controller {
         $expense              = new Expense;
         $expense->title       = $request->input( 'title' );
         $expense->value       = $request->input( 'value' );
-        $expense->description = $requeexpensesst->input( 'description' );
+        $expense->description = $request->input( 'description' );
         $expense->type        = $request->input( 'type' );
         $expense->state       = $request->input( 'state' );
         $expense->user_id     = \Auth::id();
