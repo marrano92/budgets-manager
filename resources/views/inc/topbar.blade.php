@@ -10,7 +10,7 @@
             <div class="flex relative inline-block md:float-none lg:float-right xl:float-right">
                 <div class="relative text-sm w-56">
                     <button id="userButton" class="flex items-center focus:outline-none mr-3 ml-auto">
-                        <img class="w-8 h-8 rounded-full mr-4" src="http://i.pravatar.cc/300"
+                        <img class="w-8 h-8 rounded-full mr-4" src="{{\Illuminate\Support\Facades\Auth::user()->image}}"
                              alt="Avatar of User">
                         <span class="hidden md:inline-block">Hi, {{ Auth::user()->name }} </span>
                         <svg class="pl-2 h-2" version="1.1" xmlns="http://www.w3.org/2000/svg"

@@ -7,6 +7,7 @@ use Laravel\Socialite\Contracts\User as ProviderUser;
 class SocialGoogleAccountService {
 
     public function createOrGetUser( ProviderUser $providerUser ) {
+
         try {
             $account = SocialGoogleAccount::whereProvider( 'google' )
                                           ->whereProviderUserId( $providerUser->getId() )
@@ -19,7 +20,9 @@ class SocialGoogleAccountService {
                     'provider_user_id' => $providerUser->getId(),
                     'provider'         => 'google'
                 ] );
+
                 $user    = User::whereEmail( $providerUser->getEmail() )->first();
+
                 if ( ! $user ) {
                     $user = User::create( [
                         'email'    => $providerUser->getEmail(),

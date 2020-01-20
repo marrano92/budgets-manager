@@ -12,6 +12,9 @@ use Illuminate\View\View;
 
 class ExpenseController extends Controller {
 
+    /**
+     * ExpenseController constructor.
+     */
     public function __construct() {
         $this->middleware( 'auth' );
     }

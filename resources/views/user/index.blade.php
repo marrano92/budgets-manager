@@ -12,7 +12,11 @@
                 <h1 class="text-3xl font-bold pt-8 lg:pt-0">{{Auth::user()->name}}</h1>
                 <div class="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-teal-500 opacity-25"></div>
                 <p class="pt-4 text-base font-bold flex items-center justify-center lg:justify-start">
-                    <svg class="h-4 fill-current text-teal-700 pr-4" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+                    <svg class="h-4 fill-current text-teal-700 pr-4" xmlns="http://www.w3.org/2000/svg"
+                         viewBox="0 0 24 24">
+                        <path
+                            d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
+                    </svg>
                     {{Auth::user()->email}}
                 </p>
                 <p class="pt-2 text-gray-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start">
@@ -34,7 +38,7 @@
         <!--Img Col-->
         <div class="w-full lg:w-2/5 lg:z-10">
             <!-- Big profile image for side bar (desktop) -->
-            <img src="{{asset('img/default-profile.jpeg')}}"
+            <img src="{{\Illuminate\Support\Facades\Auth::user()->image}}"
                  class="rounded-none lg:rounded-full hidden lg:block w-2/3 -ml-32">
             <!-- Image from: http://unsplash.com/photos/MP0IUfwrn0A -->
         </div>
