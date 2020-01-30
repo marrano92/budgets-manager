@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 <?php
+
 $expenses = $obj->expenses;
 $tot = $obj->total;
 ?>

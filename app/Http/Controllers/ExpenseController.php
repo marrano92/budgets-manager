@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Expense;
+use App\Repository\ExpenseRepository;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -10,13 +11,18 @@ use Illuminate\Routing\Redirector;
 use Illuminate\Validation\ValidationException;
 use Illuminate\View\View;
 
-class ExpenseController extends Controller {
+class ExpenseController extends Controller
+{
 
     /**
      * ExpenseController constructor.
+     *
+     * @param  ExpenseRepository  $expense
      */
-    public function __construct() {
-        $this->middleware( 'auth' );
+    public function __construct(ExpenseRepository $expense)
+    {
+        $this->expense = $expense;
+        $this->middleware('auth');
     }
 
     /**
@@ -24,15 +30,11 @@ class ExpenseController extends Controller {
      *
      * @return Factory|View
      */
-    public function index() {
-        $expenses    = Expense::where( 'user_id', '=', \Auth::id() )->get();
-        $total    = 0;
+    public function index()
+    {
+        $expenses = $this->expense->find(\Auth::id());
 
-        foreach ( $expenses as $expense ) {
-            $total = $total + $expense->value;
-        }
-
-        return view( 'expense.index' )->with( [ 'obj' => (object) [ 'expenses' => $expenses, 'total' => $total ] ] );
+        return view('expense.index')->with(['obj' => $expenses->get_obj()]);
     }
 
     /**
@@ -40,8 +42,9 @@ class ExpenseController extends Controller {
      *
      * @return Factory|View
      */
-    public function create() {
-        return view( 'expense.create' );
+    public function create()
+    {
+        return view('expense.create');
     }
 
     /**
@@ -52,25 +55,26 @@ class ExpenseController extends Controller {
      * @return Redirector
      * @throws ValidationException
      */
-    public function store( Request $request ) {
-        $this->validate( $request, [
+    public function store(Request $request)
+    {
+        $this->validate($request, [
             'title'       => 'required',
             'value'       => 'required',
             'description' => 'required',
             'type'        => 'required',
             'state'       => 'required',
-        ] );
+        ]);
 
         $expense              = new Expense;
-        $expense->title       = $request->input( 'title' );
-        $expense->value       = $request->input( 'value' );
-        $expense->description = $request->input( 'description' );
-        $expense->type        = $request->input( 'type' );
-        $expense->state       = $request->input( 'state' );
+        $expense->title       = $request->input('title');
+        $expense->value       = $request->input('value');
+        $expense->description = $request->input('description');
+        $expense->type        = $request->input('type');
+        $expense->state       = $request->input('state');
         $expense->user_id     = \Auth::id();
         $expense->save();
 
-        return redirect( '/expense' )->with( 'success', 'Expense created' );
+        return redirect('/expense')->with('success', 'Expense created');
     }
 
     /**
@@ -80,11 +84,12 @@ class ExpenseController extends Controller {
      *
      * @return Factory|View
      */
-    public function show( $id ) {
+    public function show($id)
+    {
         $expenses = Expense::all();
-        $expense  = $expenses->find( $id );
+        $expense  = $expenses->find($id);
 
-        return view( 'expense.show' )->with( 'expense', $expense );
+        return view('expense.show')->with('expense', $expense);
     }
 
     /**
@@ -94,7 +99,8 @@ class ExpenseController extends Controller {
      *
      * @return Response
      */
-    public function edit( $id ) {
+    public function edit($id)
+    {
         //
     }
 
@@ -106,7 +112,8 @@ class ExpenseController extends Controller {
      *
      * @return void
      */
-    public function update( Request $request, $id ) {
+    public function update(Request $request, $id)
+    {
         //
     }
 
@@ -117,7 +124,8 @@ class ExpenseController extends Controller {
      *
      * @return Response
      */
-    public function destroy( $id ) {
+    public function destroy($id)
+    {
         //
     }
 }
